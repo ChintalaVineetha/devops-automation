@@ -1,0 +1,6 @@
+version: '3'
+services:
+  web:
+    image: ahteeniv/devops-integration:${BUILD_NUMBER}
+    ports:
+      - "8080:8080"
