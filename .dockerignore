@@ -1,1 +1,8 @@
-
+# Exclude generated files
+/generated-sources/
+/generated-test-sources/
+/maven-status/
+# Exclude original JAR file (if not needed)
+/devops-integration.jar.original
+# Exclude test classes (if not needed)
+/test-classes/
