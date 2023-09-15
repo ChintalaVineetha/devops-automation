@@ -2,20 +2,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: your-app-deployment
+  name: jenkinskubernetes-deployment
 spec:
   selector:
     matchLabels:
-      app: your-app
+      app: devops-automation
   replicas: 2
   template:
     metadata:
       labels:
-        app: your-app
+        app: devops-automation
     spec:
       containers:
-        - name: your-app-container
-          image: your-image:tag # Replace with your Docker image name and tag
+        - name: devopsautomation-container
+          image: ahteeniv/devopsautomation # Replace with your Docker image name and tag
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
@@ -24,10 +24,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: your-app-service
+  name: jenkinskubernetes-service
 spec:
   selector:
-    app: your-app
+    app: devops-automation
   ports:
     - protocol: "TCP"
       port: 8080
